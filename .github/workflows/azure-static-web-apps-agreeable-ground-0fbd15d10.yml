@@ -37,7 +37,9 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-            node-version: '20'          
+            node-version: '20' 
+      - name: Upgrade npm
+        run: npm install -g npm@latest
       - name: Install dependencies with legacy-peer-deps
         run: npm install --force
   close_pull_request_job:
