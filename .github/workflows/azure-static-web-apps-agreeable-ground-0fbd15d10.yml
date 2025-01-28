@@ -35,7 +35,7 @@ jobs:
         env:
           CI: false
       - name: Install dependencies with legacy-peer-deps
-        run: npm install --legacy-peer-deps --force
+        run: npm install --force
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
